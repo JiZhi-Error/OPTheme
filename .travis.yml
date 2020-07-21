@@ -3,12 +3,14 @@ deploy:
   provider: releases
   api_key:
     secure: lYPg4ZxhVwY3uSsFPRiq9+P0BaOszi3UknUQpuhG/dT1cwktOV1ckiO3bxk53RPDxfw2Iij3Lvgz9LofNpz1zqbP3ZK6WKkoIBITw0Pd7RFtOnVKnlwVRDSjYADBxSOIl3a9TusXioLiXA10ZVNUb2kd546HlCYaAdo4npYJijHL5nGEBzcc7BOYFcO6sO/qB6Iy5qorajqwSPQ42Ta+98omorN2sW63GrgUtCwol6WLCE9Xzd/3YY0W83OJ7xbXhFuHSLNUzXTvPTDnKxEoFLtXZxVFzGBQSH3zC+ZK1XdKogG0H7/KPKraI/Tv1TT50N1R0RABZCK6l/38ehQMADphfg+YXR0qS6VmjvwH/LdSsSuwlGktwIkp9ZKD+wuvwDCtfLibIYcF0NIgPOKBGGKu8gCFOwJv8q1sPYpmnjyHMKb+lpA3whQ79vA/zr6gCzdzGZE/HazMUxYqcwMXKcVn4z8ivdoeMJxBFW121NKEeMURWJ+P0Yw+ijQNf251lBKw678jmt30XTh2IRdVIs+ACZsHh/koenc94BhnvdKGqmoP+RwKNKWLA5AsUzoLvxl1dkpZTvxggeQ0+sETzrJL81aDNocOD6f5u5DedJkwgYvd01wJ9DRpVWd4/3BpVxIMD75Y+QsMl/a3jN6cIqHGtZty/VqUKwxuJuh+OGM=
-  file: app/build/outputs/apk/app-release.apk
+  file: app/build/outputs/apk/*/*.apk
+  file_glob: true
   on:
     repo: JiZhi-Error/OPTheme
     branch: release
     tags: true
-  skip_cleanup: 'true'
+  # 避免 Travis CI在部署之前清空生成的APK文件
+  skip_cleanup: true
 android:
   components:
   - build-tools-30.0.1
