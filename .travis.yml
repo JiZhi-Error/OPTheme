@@ -2,12 +2,12 @@ language: android
 deploy:
   provider: releases
   api_key:
-    secure: lYPg4ZxhVwY3uSsFPRiq9+P0BaOszi3UknUQpuhG/dT1cwktOV1ckiO3bxk53RPDxfw2Iij3Lvgz9LofNpz1zqbP3ZK6WKkoIBITw0Pd7RFtOnVKnlwVRDSjYADBxSOIl3a9TusXioLiXA10ZVNUb2kd546HlCYaAdo4npYJijHL5nGEBzcc7BOYFcO6sO/qB6Iy5qorajqwSPQ42Ta+98omorN2sW63GrgUtCwol6WLCE9Xzd/3YY0W83OJ7xbXhFuHSLNUzXTvPTDnKxEoFLtXZxVFzGBQSH3zC+ZK1XdKogG0H7/KPKraI/Tv1TT50N1R0RABZCK6l/38ehQMADphfg+YXR0qS6VmjvwH/LdSsSuwlGktwIkp9ZKD+wuvwDCtfLibIYcF0NIgPOKBGGKu8gCFOwJv8q1sPYpmnjyHMKb+lpA3whQ79vA/zr6gCzdzGZE/HazMUxYqcwMXKcVn4z8ivdoeMJxBFW121NKEeMURWJ+P0Yw+ijQNf251lBKw678jmt30XTh2IRdVIs+ACZsHh/koenc94BhnvdKGqmoP+RwKNKWLA5AsUzoLvxl1dkpZTvxggeQ0+sETzrJL81aDNocOD6f5u5DedJkwgYvd01wJ9DRpVWd4/3BpVxIMD75Y+QsMl/a3jN6cIqHGtZty/VqUKwxuJuh+OGM=
+secure: lYPg4ZxhVwY3uSsFPRiq9+P0BaOszi3UknUQpuhG/dT1cwktOV1ckiO3bxk53RPDxfw2Iij3Lvgz9LofNpz1zqbP3ZK6WKkoIBITw0Pd7RFtOnVKnlwVRDSjYADBxSOIl3a9TusXioLiXA10ZVNUb2kd546HlCYaAdo4npYJijHL5nGEBzcc7BOYFcO6sO/qB6Iy5qorajqwSPQ42Ta+98omorN2sW63GrgUtCwol6WLCE9Xzd/3YY0W83OJ7xbXhFuHSLNUzXTvPTDnKxEoFLtXZxVFzGBQSH3zC+ZK1XdKogG0H7/KPKraI/Tv1TT50N1R0RABZCK6l/38ehQMADphfg+YXR0qS6VmjvwH/LdSsSuwlGktwIkp9ZKD+wuvwDCtfLibIYcF0NIgPOKBGGKu8gCFOwJv8q1sPYpmnjyHMKb+lpA3whQ79vA/zr6gCzdzGZE/HazMUxYqcwMXKcVn4z8ivdoeMJxBFW121NKEeMURWJ+P0Yw+ijQNf251lBKw678jmt30XTh2IRdVIs+ACZsHh/koenc94BhnvdKGqmoP+RwKNKWLA5AsUzoLvxl1dkpZTvxggeQ0+sETzrJL81aDNocOD6f5u5DedJkwgYvd01wJ9DRpVWd4/3BpVxIMD75Y+QsMl/a3jN6cIqHGtZty/VqUKwxuJuh+OGM=
   file: app/build/outputs/apk/app-release.apk
   on:
-    repo: JiZhi-Error/OPTheme
-    branch: release
-    tags: true
+repo: JiZhi-Error/OPTheme
+branch: release
+tags: true
   skip_cleanup: 'true'
 android:
   components:
@@ -23,3 +23,12 @@ script:
 before_install:
 - openssl aes-256-cbc -K $encrypted_b4de652e6f20_key -iv $encrypted_b4de652e6f20_iv
   -in jizhi.jks.enc -out jizhi.jks -d
+install:
+- echo yes | sdkmanager "tools"
+- echo yes | sdkmanager "platforms;android-25" # Latest platform required by SDK tools
+- echo yes | sdkmanager "platforms;android-${API}" # Android platform required by emulator
+- echo yes | sdkmanager "extras;android;m2repository"
+- echo yes | sdkmanager "extras;google;m2repository"
+- echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
+- echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
+- echo yes | sdkmanager "$EMULATOR" # Install emulator system image
