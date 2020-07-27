@@ -3,7 +3,7 @@
     package="com.jizhi.optheme">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -16,6 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <!-- 指定xposed的最小版本 -->
+        <meta-data
+            android:name="xposedminversion"
+            android:value="30+" />
+        <!-- 插件的描述 -->
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/app_name" />
     </application>
 
 </manifest>
