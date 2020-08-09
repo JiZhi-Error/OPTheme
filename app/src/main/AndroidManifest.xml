@@ -9,21 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.AboutActivity"
+            android:theme="@style/TransparentTheme" />
+        <activity
+            android:name=".activity.DetailsActivity"
+            android:theme="@style/TransparentTheme" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/DialogTheme" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="xposedmodule"
-            android:value="true" />
-        <!-- 指定xposed的最小版本 -->
+            android:value="true" /> <!-- 指定xposed的最小版本 -->
         <meta-data
             android:name="xposedminversion"
-            android:value="30+" />
-        <!-- 插件的描述 -->
+            android:value="30+" /> <!-- 插件的描述 -->
         <meta-data
             android:name="xposeddescription"
             android:value="@string/app_name" />

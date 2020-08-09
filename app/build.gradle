@@ -145,6 +145,9 @@ dependencies {
     api project(':libhulk')
     //arouter
     api rootProject.ext.dependencies["arouter"]
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     kapt rootProject.ext.dependencies["arouter-compiler"]
 
 //    implementation "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}"
@@ -158,5 +161,12 @@ dependencies {
 
 //    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
 //    implementation "com.jeremyliao:live-event-bus-x:1.7.2"
+
+    //  QMUI_Android  https://github.com/Tencent/QMUI_Android
+    implementation 'com.qmuiteam:qmui:2.0.0-alpha10'
+
+    //  Glide  https://github.com/bumptech/glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
 }

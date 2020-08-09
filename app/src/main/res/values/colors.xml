@@ -3,4 +3,14 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black_h1">#000000</color>
+    <color name="qmui_config_color_blue">#7C93F3</color>
+    <color name="blue_h1">#7C93F3</color>
+    <color name="red_h1">#FF002A</color>
+    <color name="gray_h1">#959595</color>
+    <color name="gray_h2">#C2C5CC</color>
+
 </resources>
