@@ -58,4 +58,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
     implementation "com.jeremyliao:live-event-bus-x:1.7.2"
 
+    //https://github.com/Blankj/AndroidUtilCode
+    implementation 'com.blankj:utilcodex:1.29.0'
+
 }
