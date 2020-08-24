@@ -3,4 +3,24 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <!-- 背景色1 -->
+    <!-- 主色 -->
+    <color name="startColor">#1987EA</color>
+    <!-- 主色2 -->
+    <color name="uncheckedColor">#2AB5FF</color>
+    <!-- 辅助色1 -->
+    <color name="auxiliaryColor_h1">#FFB542</color>
+    <!-- 辅助色2 -->
+    <color name="auxiliaryColor_h2">#FF6565</color>
+    <!-- 字体色1 -->
+    <color name="textColor_h1">#383838</color>
+    <!-- 字体色2 -->
+    <color name="textColor_h2">#4F515B</color>
+    <!-- 字体色3 -->
+    <color name="textColor_h3">#838495</color>
+    <!-- 背景色1 -->
+    <color name="bgColor_h1">#CDD3DA</color>
+    <!-- 背景色1 -->
+    <color name="bgColor_h2">#F4F4F4</color>
 </resources>

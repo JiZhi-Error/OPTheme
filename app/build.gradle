@@ -17,8 +17,8 @@ android {
         applicationId "com.jizhi.optheme"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 303
-        versionName "3.2.2"
+        versionCode 311
+        versionName "3.4.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -30,10 +30,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile     file("../jizhi.jks")
+            storeFile file("../jizhi.jks")
             storePassword keyProperties.containsKey("KEYSTORE_PASS") ? keyProperties['KEYSTORE_PASS'] : System.getenv("KEYSTORE_PASS")
-            keyAlias      keyProperties.containsKey("ALIAS_NAME")    ? keyProperties['ALIAS_NAME']    : System.getenv("ALIAS_NAME")
-            keyPassword   keyProperties.containsKey("ALIAS_PASS")    ? keyProperties['ALIAS_PASS']    : System.getenv("ALIAS_PASS")
+            keyAlias keyProperties.containsKey("ALIAS_NAME") ? keyProperties['ALIAS_NAME'] : System.getenv("ALIAS_NAME")
+            keyPassword keyProperties.containsKey("ALIAS_PASS") ? keyProperties['ALIAS_PASS'] : System.getenv("ALIAS_PASS")
         }
     }
 
@@ -48,10 +48,10 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 

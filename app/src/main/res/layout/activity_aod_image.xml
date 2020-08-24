@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".AodImageActivity">
+
+    <EditText
+        android:id="@+id/et_atyMoreSettings_width"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="123"
+        android:background="@drawable/shape_gray_radius_6"
+        android:hint="@string/atyMoreSettings_et_width"
+        android:inputType="number"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_h3"
+        android:textColorHint="@color/textColor_h2" />
+
+    <EditText
+        android:id="@+id/et_atyMoreSettings_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_gray_radius_6"
+        android:hint="@string/atyMoreSettings_et_height"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_h3"
+        android:textColorHint="@color/textColor_h2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="水平居中"/>
+
+        <Button
+            android:id="@+id/but2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="垂直居中" />
+
+        <Button
+            android:id="@+id/but3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="居中" />
+
+        <Button
+            android:id="@+id/but4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无" />
+
+    </LinearLayout>
+
+    <EditText
+
+        android:id="@+id/et_atyMoreSettings_marginLeft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_gray_radius_6"
+        android:hint="@string/atyMoreSettings_et_marginLeft"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_h3"
+        android:textColorHint="@color/textColor_h2"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/et_atyMoreSettings_marginTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_gray_radius_6"
+        android:hint="@string/atyMoreSettings_et_marginTop"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_h3"
+        android:textColorHint="@color/textColor_h2"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/et_atyMoreSettings_marginRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_gray_radius_6"
+        android:hint="@string/atyMoreSettings_et_marginRight"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_h3"
+        android:textColorHint="@color/textColor_h2"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/et_atyMoreSettings_marginBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_gray_radius_6"
+        android:hint="@string/atyMoreSettings_et_marginBottom"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_h3"
+        android:textColorHint="@color/textColor_h2"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/but5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定" />
+</LinearLayout>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">OPTheme</string>
+    <string name="atyMoreSettings_et_width">宽度</string>
+    <string name="atyMoreSettings_et_height">高度</string>
+    <string name="atyMoreSettings_et_marginLeft">距离左侧屏幕</string>
+    <string name="atyMoreSettings_et_marginTop">距离上侧屏幕</string>
+    <string name="atyMoreSettings_et_marginRight">距离右侧屏幕</string>
+    <string name="atyMoreSettings_et_marginBottom">距离下侧屏幕</string>
 </resources>

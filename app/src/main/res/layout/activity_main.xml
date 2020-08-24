@@ -6,186 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Switch
-        android:id="@+id/switch3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="17dp"
-        android:text="Aod循环通知"
-        app:layout_constraintStart_toStartOf="@+id/switch2"
-        app:layout_constraintTop_toBottomOf="@+id/switch2" />
-
-    <FrameLayout
-        android:id="@+id/frameLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:background="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2">
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="355dp"
-        android:background="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </FrameLayout>
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:ems="10"
-        android:hint="动画次数"
-        android:inputType="number"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout3"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="15dp"
-        android:text="设置"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout3"
-        app:layout_constraintEnd_toEndOf="@+id/frameLayout3" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="21dp"
-        android:ems="10"
-        android:hint="亮屏时间"
-        android:inputType="number"
-        android:text="3000"
+        android:layout_marginTop="133dp"
+        android:text="图片(暂不可用)"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="41dp"
-        android:text="设置"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextPersonName2"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:ems="10"
-        android:hint="通知一次后延迟时间"
-        android:inputType="number"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="18dp"
-        android:text="设置"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName3"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName3" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="上面是改AOD通知动画次数的，中间是改AOD时间，下面是循环通知，自己搭配折腾。输入框只能敲数字，敲其他闪退别找我，此版本只是头铁版。没写开机初始化，没写*****，自己领悟吧。+1-1的我也没调，头铁版，自己折腾。AOD时间是毫秒哈，你懂的，不懂啥是毫秒的麻烦百度下，我这破电脑tm****"
+        android:text="通知"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="18dp"
-        android:ems="10"
-        android:hint="通知几次"
-        android:inputType="number"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/frameLayout2"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout2" />
-
-    <FrameLayout
-        android:id="@+id/frameLayout4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </FrameLayout>
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="52dp"
-        android:text="设置"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout4"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:text="未激活"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Switch
-        android:id="@+id/switch1"
+    <Button
+        android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="19dp"
-        android:text="Aod功能"
-        app:layout_constraintBottom_toTopOf="@+id/switch2"
-        app:layout_constraintStart_toStartOf="@+id/switch2" />
-
-    <Switch
-        android:id="@+id/switch2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginBottom="99dp"
-        android:text="Aod通知动画闪烁次数"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:layout_marginBottom="158dp"
+        android:text="重启SystemUI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
