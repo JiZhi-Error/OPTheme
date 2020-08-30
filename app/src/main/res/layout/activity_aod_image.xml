@@ -7,32 +7,94 @@
     android:padding="20dp"
     tools:context=".AodImageActivity">
 
-    <EditText
-        android:id="@+id/et_atyMoreSettings_width"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints="123"
-        android:background="@drawable/shape_gray_radius_6"
-        android:hint="@string/atyMoreSettings_et_width"
-        android:inputType="number"
-        android:padding="15dp"
-        android:singleLine="true"
-        android:textColor="@color/textColor_h3"
-        android:textColorHint="@color/textColor_h2" />
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/et_atyMoreSettings_height"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宽度" />
+
+        <Button
+            android:id="@+id/but11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认" />
+
+        <Button
+            android:id="@+id/but12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="填充满" />
+
+        <Button
+            android:id="@+id/but13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义" />
+
+        <EditText
+            android:id="@+id/et_atyMoreSettings_width"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="123"
+            android:background="@drawable/shape_gray_radius_6"
+            android:hint="@string/atyMoreSettings_et_width"
+            android:inputType="number"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:text="-2"
+            android:textColor="@color/textColor_h3"
+            android:textColorHint="@color/textColor_h2"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/shape_gray_radius_6"
-        android:hint="@string/atyMoreSettings_et_height"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:padding="15dp"
-        android:singleLine="true"
-        android:textColor="@color/textColor_h3"
-        android:textColorHint="@color/textColor_h2" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="高度" />
+
+        <Button
+            android:id="@+id/but21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认" />
+
+        <Button
+            android:id="@+id/but22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="填充满" />
+
+        <Button
+            android:id="@+id/but23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义" />
+
+        <EditText
+            android:id="@+id/et_atyMoreSettings_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_gray_radius_6"
+            android:hint="@string/atyMoreSettings_et_height"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:text="-2"
+            android:textColor="@color/textColor_h3"
+            android:textColorHint="@color/textColor_h2"
+            android:visibility="gone" />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -43,7 +105,7 @@
             android:id="@+id/but1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="水平居中"/>
+            android:text="水平居中" />
 
         <Button
             android:id="@+id/but2"
@@ -131,4 +193,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="确定" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择图片" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前图片是：" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </LinearLayout>

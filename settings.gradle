@@ -1,3 +1,2 @@
-//include ':libhulk'
 include ':app'
 rootProject.name = "OPTheme"

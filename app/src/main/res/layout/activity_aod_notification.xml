@@ -3,18 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.AodNotificationActivity">
+    android:layout_height="match_parent">
 
     <Switch
         android:id="@+id/switch3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="23dp"
         android:text="Aod循环通知"
         app:layout_constraintStart_toStartOf="@+id/switch2"
         app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="35dp"
+        android:text="旧版万物功能"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch3" />
 
     <FrameLayout
         android:id="@+id/frameLayout2"
@@ -32,8 +41,8 @@
         android:id="@+id/frameLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="355dp"
         android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -44,35 +53,38 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="17dp"
         android:ems="10"
         android:hint="动画次数"
         android:inputType="number"
         android:text="0"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout3"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout4" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="41dp"
+        android:layout_marginEnd="11dp"
         android:layout_marginBottom="15dp"
         android:text="设置"
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout3"
-        app:layout_constraintEnd_toEndOf="@+id/frameLayout3" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="21dp"
         android:ems="10"
         android:hint="亮屏时间"
         android:inputType="number"
         android:text="3000"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/frameLayout3" />
 
@@ -80,16 +92,17 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="41dp"
+        android:layout_marginEnd="11dp"
         android:text="设置"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextPersonName2"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="通知一次后延迟时间"
         android:inputType="number"
@@ -107,20 +120,6 @@
         app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName3"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName3" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="上面是改AOD通知动画次数的，中间是改AOD时间，下面是循环通知，自己搭配折腾。输入框只能敲数字，敲其他闪退别找我，此版本只是头铁版。没写开机初始化，没写*****，自己领悟吧。+1-1的我也没调，头铁版，自己折腾。AOD时间是毫秒哈，你懂的，不懂啥是毫秒的麻烦百度下，我这破电脑tm****"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
     <EditText
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="wrap_content"
@@ -136,12 +135,12 @@
 
     <FrameLayout
         android:id="@+id/frameLayout4"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="17dp"
         android:background="#000000"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
     </FrameLayout>
@@ -150,28 +149,29 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="6dp"
         android:text="设置"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout4"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/switch2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="29dp"
         android:text="未激活"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/switch1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="10dp"
         android:text="Aod功能"
         app:layout_constraintBottom_toTopOf="@+id/switch2"
         app:layout_constraintStart_toStartOf="@+id/switch2" />
@@ -180,12 +180,23 @@
         android:id="@+id/switch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginBottom="99dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="95dp"
         android:text="Aod通知动画闪烁次数"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout4"
+        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="1dp"
+        android:text="AOD背景资源"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
